@@ -1,20 +1,20 @@
 ﻿// Задача 38: Задайте массив вещественных чисел. 
 // Найдите разницу между максимальным и минимальным элементов массива.
 
-int[] Create(int len)
+double[] Create(int len)
 {
-    return new int[len];
+    return new double[len];
 }
 
-void Fill(int[] arr)
+void Fill(double[] arr)
 {
     for (int i = 0; i < arr.Length; i++)
     {
-        arr[i] = new Random(). Next(0,300);
+        arr[i] = new Random().NextDouble();
     }
 }
 
-void Print(int[] array)
+void Print(double[] array)
 {
     for (int i = 0; i < array.Length; i++)
     {
@@ -23,12 +23,12 @@ void Print(int[] array)
     Console.WriteLine();
 }
 
-int Numbers(int[] array)
+double Numbers(double[] array)
 {
     int i = 0;
-    int max = array[i];
-    int min = array[i];
-    int diff = 0;
+    double max = array[i];
+    double min = array[i];
+    double diff = 0;
     for (;i < array.Length; i++)
     {
         if (max < array[i]) 
@@ -46,7 +46,7 @@ int Numbers(int[] array)
     
 }
 
-int[] num = Create(8);
+double[] num = Create(8);
 Fill(num);
 Print(num);
 Numbers(num);
